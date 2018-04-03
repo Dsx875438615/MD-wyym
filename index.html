@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script>  
+    
+    //designWidth:设计稿的实际宽度值，需要根据实际设置
+    //maxWidth:制作稿的最大宽度值，需要根据实际设置
+
+    ;(function(designWidth, maxWidth) {
+      var doc = document,
+      win = window,
+      docEl = doc.documentElement,
+      remStyle = document.createElement("style"),
+      tid;
+
+      function refreshRem() {
+        var width = docEl.getBoundingClientRect().width;
+        maxWidth = maxWidth || 540;
+        width>maxWidth && (width=maxWidth);
+        var rem = width * 16 / designWidth;
+        remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+      }
+
+      if (docEl.firstElementChild) {
+        docEl.firstElementChild.appendChild(remStyle);
+      } else {
+        var wrap = doc.createElement("div");
+        wrap.appendChild(remStyle);
+        doc.write(wrap.innerHTML);
+        wrap = null;
+      }
+      //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+      refreshRem();
+
+      win.addEventListener("resize", function() {
+        clearTimeout(tid); //防止执行两次
+        tid = setTimeout(refreshRem, 300);
+      }, false);
+
+      win.addEventListener("pageshow", function(e) {
+        if (e.persisted) { // 浏览器后退的时候重新计算
+          clearTimeout(tid);
+          tid = setTimeout(refreshRem, 300);
+        }
+      }, false);
+
+      if (doc.readyState === "complete") {
+        doc.body.style.fontSize = "16px";
+      } else {
+        doc.addEventListener("DOMContentLoaded", function(e) {
+          doc.body.style.fontSize = "16px";
+        }, false);
+      }
+    })(1080, 1080);
+
+    </script>
+    <title>网易云音乐</title>
+  </head>
+
+  <body>
+   
+    <header class="clear">
+      <ul>
+        <!-- 主页 -->
+        <li class="main">
+          <a href="#"><img src="img/music-1.png" alt=""></a>
+        </li>
+        <!-- 用户动态 -->
+        <li class="dynamics">
+          <a href="#"><img src="img/dongtai-2.png" alt=""></a>
+        </li>
+      </ul>
+      <a href="#" class="sousuo"><img src="img/sousuo.png" alt=""></a>
+    </header>
+
+ 
+    <section id="main">
+      <!-- swiper1 -->
+        <div class="swiper-container swiper1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide selected music">音乐</div>
+            <div class="swiper-slide video">视频</div>
+            <div class="swiper-slide radio">电台</div>
+          </div>
+        </div>
+      <!-- swiper2 -->
+        <div class="swiper-container swiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-no-swiping">
+              <!-- 轮播图 -->
+              <div class="main-music">
+                <div class="swiper-container swiper3 music-lunbo">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="img/music-nav1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/music-nav2.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="img/music-nav3.jpg" alt="">
+                        </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- 导航 -->
+              <ul class="main-nav">
+                <li>
+                  <a href="#">
+                    <img src="img/icon1.png" alt="">
+                    <i>私人FM</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/icon2.png" alt="">
+                      <i>每日推荐</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/icon3.png" alt="">
+                      <i>歌单</i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                      <img src="img/icon4.png" alt="">
+                      <i>排行榜</i>
+                  </a>
+                </li>
+              </ul>
+              <!-- 推荐歌单 -->
+              <div class="recommended-list">
+                <a href="#" class="title">推荐歌单</a>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <img src="img/list1.png" alt="">
+                      <p>你不知道我多羡慕你特立独行的样子</p>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#">
+                        <img src="img/list2.png" alt="">
+                        <p>全球最高下载量单曲TOP100</p>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                          <img src="img/list1.png" alt="">
+                          <p>你不知道我多羡慕你特立独行的样子</p>
+                        </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                            <img src="img/list2.png" alt="">
+                            <p>全球最高下载量单曲TOP100</p>
+                          </a>
+                        </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="swiper-slide swiper-no-swiping">视频</div>
+            <div class="swiper-slide swiper-no-swiping">电台</div>
+          </div>
+        </div>
+    </section>
+
+    <footer>
+      <audio src="#" autoplay="autoplay"></audio>
+      <div class="play-img">
+        <img src="img/1.png" alt="">
+      </div>
+      <div class="song">
+        <p class="sing">歌曲</p>
+        <p class="singer">歌手</p>
+      </div>
+      <div class="play">
+        <img src="img/play.png" alt="">
+      </div>
+    </footer>
+
+   
+    
+  </body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+<script src="js/swiperjs.js"></script>

@@ -1,0 +1,166 @@
+body{
+    background: #f2f4f5;
+}
+
+header{
+    background: #009688;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    ul{
+        display: flex;
+        margin: 0 auto;
+        li{
+            margin: 0 3.125rem;
+        }
+    }
+    .sousuo{
+        position: absolute;
+        right: 2.25rem;
+    }
+    img{
+        width: 4.625rem;
+        height: 4.5rem;
+    }
+}
+
+
+#main{
+    .swiper1{
+        .swiper-wrapper{
+            display: flex;
+            justify-content: center;
+            .swiper-slide{
+                width: 12.5rem;
+                text-align: center;
+                font: 40px "";
+                color: #666666;
+                line-height: 6.25rem;
+                margin: 0 3.75rem;
+            }
+            .selected{
+                border-bottom: .375rem solid #009688;
+            }
+        }  
+    }
+    .swiper2{
+        .main-music{
+            margin: .9375rem .9375rem;
+            .swiper3{
+                img{
+                    width: 67.5rem;
+                    height: 25.3125rem;
+                }
+            }
+        }
+        .main-nav{
+            display: flex;
+            padding: 2.8125rem 0 3.4375rem;
+            box-sizing:border-box;
+            background: #f2f4f5;
+            border-bottom: .0625rem solid #dadcdd;
+            li{
+                margin:0 3.9375rem;
+                img{
+                    width: 9rem;
+                    height: 9rem;
+                    margin-bottom: 1.5625rem;
+                }
+                i{
+                    display: block;
+                    text-align: center;
+                    line-height: 2.125rem;
+                    font: 2.125rem "";
+                    color: #303131;
+                }
+            }
+        }
+        .recommended-list{
+            .title{
+                display: block;
+                font: 2.8125rem "";
+                line-height: 2.8125rem;
+                color: #303131;
+                margin: 4.375rem 0 2.8125rem;
+                padding-left: 1.4375rem;
+                text-align: left;
+                border-left: .375rem solid #009688;
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li{
+                    width: 22.25rem;
+                    margin-bottom: 3.4375rem;
+                    a{
+                        img{
+                            width: 22.25rem;
+                            height: 22.25rem;
+                        }
+                        p{
+                            box-sizing: border-box;
+                            padding: 0 3.125rem 0 1.125rem;
+                            text-align: left;
+                            font: 2.125rem "";
+                            line-height: 2.5rem;
+                            color: #303131;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    height: 9.375rem;
+    display: flex;
+    padding: 1.125rem;
+    box-sizing: border-box;
+    background: #fbfbfa;
+    width: 100%;
+    .play-img{
+        margin-right: 1.25rem;
+        display: flex;
+        align-content: center;
+        img{
+            width: 6.9375rem;
+            height: 6.9375rem;
+        }
+    }
+    .song{
+        width: 50rem;
+        text-align: left;
+        .sing{
+            
+            font: 2.25rem "";
+            line-height: 2.25rem;
+            color: #333333;
+            margin: .625rem 0 1.25rem;
+        }
+        .singer{
+            
+            font: 2rem "";
+            line-height: 2rem;
+            color: #808080;
+        }
+    }
+    .play{
+        text-align: center;
+        img{
+            vertical-align: middle;
+        }
+    }
+    .play:after{
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
