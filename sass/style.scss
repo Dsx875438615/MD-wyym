@@ -154,15 +154,23 @@ footer{
     }
     .play{
         text-align: center;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        .pause-btn{
+            display: none
+        }
+        i{
+            width: 4.9375rem;
+            height: 4.9375rem;
+            line-height: 4.9375rem;
+            font: 4.9375rem "";
+        }
         img{
-            vertical-align: middle;
+            width: 4.9375rem;
+            height: 4.9375rem;
+            margin: 0 1.5625rem;
         }
     }
-    .play:after{
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 100%;
-        vertical-align: middle;
-    }
+    
 }

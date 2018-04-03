@@ -175,16 +175,19 @@
     </section>
 
     <footer>
-      <audio src="#" autoplay="autoplay"></audio>
+      <audio id="audio" src="img/月半小夜曲.mp3" preload="metadata"></audio>
       <div class="play-img">
         <img src="img/1.png" alt="">
       </div>
       <div class="song">
-        <p class="sing">歌曲</p>
-        <p class="singer">歌手</p>
+        <p class="sing">月半小夜曲</p>
+        <p class="singer">李克勤</p>
       </div>
       <div class="play">
-        <img src="img/play.png" alt="">
+        
+        <img src="img/play.png" alt="" class="palybtn">
+        <!-- <img src="img/pause.png" alt="" class="pause-btn"> -->
+        <i class="playgo">&gt</i>
       </div>
     </footer>
 
@@ -195,3 +198,43 @@
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
 <script src="js/swiperjs.js"></script>
+<script src="js/play.js"></script>
+<script>
+
+$(function(){
+  audio = document.getElementById("audio");
+  
+  $(".palybtn").toggle(
+    function(){
+      play();      
+   },
+   function(){
+    pause();
+   }
+  )
+
+  function play(){
+    audio.play();
+    $(".palybtn").attr("src","img/pause.png");
+  }
+
+  function pause(){
+    audio.pause();
+    $(".palybtn").attr("src","img/play.png");
+  }
+
+  $(".playgo").on("click", function(){
+    $("#audio").attr("src","img/张学友 - 李香兰.mp3");
+    $(".sing").text("李香兰");
+    $(".singer").text("张学友");
+    play();
+  });
+
+});
+
+
+
+
+
+
+</script>
