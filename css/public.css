@@ -24,6 +24,13 @@ vertical-align:middle;}/*给valign添加个子元素对齐图片*/
 .clear{zoom:1;}
 .clear:after{content:"";clear:both;display:block;}
 
+/* icon */
+.icon {
+    
+    fill: currentColor;
+    overflow: hidden;
+ }
+
 
 
 

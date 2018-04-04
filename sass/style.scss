@@ -146,7 +146,6 @@ footer{
             margin: .625rem 0 1.25rem;
         }
         .singer{
-            
             font: 2rem "";
             line-height: 2rem;
             color: #808080;
@@ -155,22 +154,16 @@ footer{
     .play{
         text-align: center;
         display: flex;
-        align-items: baseline;
-        justify-content: center;
-        .pause-btn{
+        justify-content: space-between;
+        align-items: center;
+        .pausebtn{
             display: none
         }
-        i{
-            width: 4.9375rem;
-            height: 4.9375rem;
-            line-height: 4.9375rem;
-            font: 4.9375rem "";
-        }
-        img{
+        svg{
             width: 4.9375rem;
             height: 4.9375rem;
             margin: 0 1.5625rem;
-        }
+        }       
     }
     
 }

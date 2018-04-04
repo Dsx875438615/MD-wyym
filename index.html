@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+    <script src="https://at.alicdn.com/t/font_616443_1ycap97jf0qkt9.js"></script>
     <script>  
     
     //designWidth:设计稿的实际宽度值，需要根据实际设置
@@ -184,11 +185,17 @@
         <p class="singer">李克勤</p>
       </div>
       <div class="play">
-        
-        <img src="img/play.png" alt="" class="palybtn">
-        <!-- <img src="img/pause.png" alt="" class="pause-btn"> -->
-        <i class="playgo">&gt</i>
+        <svg class="icon palybtn">
+          <use xlink:href="#icon-bofang"></use>
+        </svg>
+        <svg class="icon pausebtn">
+            <use xlink:href="#icon-zanting"></use>
+        </svg>
+        <svg class="icon playgo">
+          <use xlink:href="#icon-jiantouyou"></use>      
+        </svg>        
       </div>
+      
     </footer>
 
    
@@ -200,38 +207,6 @@
 <script src="js/swiperjs.js"></script>
 <script src="js/play.js"></script>
 <script>
-
-$(function(){
-  audio = document.getElementById("audio");
-  
-  $(".palybtn").toggle(
-    function(){
-      play();      
-   },
-   function(){
-    pause();
-   }
-  )
-
-  function play(){
-    audio.play();
-    $(".palybtn").attr("src","img/pause.png");
-  }
-
-  function pause(){
-    audio.pause();
-    $(".palybtn").attr("src","img/play.png");
-  }
-
-  $(".playgo").on("click", function(){
-    $("#audio").attr("src","img/张学友 - 李香兰.mp3");
-    $(".sing").text("李香兰");
-    $(".singer").text("张学友");
-    play();
-  });
-
-});
-
 
 
 
