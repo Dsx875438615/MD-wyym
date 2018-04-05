@@ -167,3 +167,86 @@ footer{
     }
     
 }
+
+#play-page{
+    background: radial-gradient(circle, #212051, #3a3c4c, #07070d);
+    height: 119.375rem;
+    .play-page-header{
+        box-sizing: border-box;
+        padding:1.875rem 3.3125rem 4.0625rem;
+        svg{
+            width: 3.75rem;
+            height: 3.4375rem;
+            margin: 1.5625rem 0;
+            color: #fff;
+        }
+    }
+    .cover{
+        display: flex;
+        justify-content: center;
+        img{
+            width: 58.75rem;
+            height: 58.75rem;
+        }
+    }
+    .page-name{
+        text-align: center;
+        padding: 4.25rem 0 9.9375rem;
+        box-sizing: border-box;
+        .page-sing{
+            font: 3.125rem "";
+            line-height: 5.9375rem;
+            color: #fff;
+            font-weight: bold;
+        }
+        .page-singer{
+            font: 2.5rem "";
+            line-height: 5.25rem;
+            color: #878798;
+        }
+    }
+    .schedule{
+        height: 2.5rem;
+        margin-bottom: 4.375rem;
+        padding: 0 3.3125rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content:  space-between;
+        align-items: center;
+        
+        span{
+            font: 1.25rem "";
+            line-height: 2.625rem;
+        }
+        .timeing{
+            color: #fff;
+        }
+        .jinduwrap{
+            width: 50rem;
+            height: .375rem;
+            background: #555561;
+            border-radius: 10% 10%;
+            margin: 0 2rem;
+            .jinduIng{
+                display: block;
+                width: 0rem;
+                height: .375rem;
+                background: #009688; 
+            }
+        }
+        .time{
+            color: #45444c;
+        }
+    }
+    .pagePlay{
+        display: flex;
+        justify-content: center;
+        svg{
+            width: 8.625rem;
+            height: 8.625rem;
+        }
+        .page-pausebtn{
+            display: none;
+        }
+    }
+}

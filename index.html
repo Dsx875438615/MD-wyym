@@ -181,8 +181,11 @@
         <img src="img/1.png" alt="">
       </div>
       <div class="song">
-        <p class="sing">月半小夜曲</p>
-        <p class="singer">李克勤</p>
+        <a href="play.html">
+            <p class="sing">月半小夜曲</p>
+            <p class="singer">李克勤</p>
+        </a>
+        
       </div>
       <div class="play">
         <svg class="icon palybtn">
@@ -195,8 +198,46 @@
           <use xlink:href="#icon-jiantouyou"></use>      
         </svg>        
       </div>
-      
     </footer>
+
+    <!-- 播放页面 -->
+    <div id="play-page" style="display:none">
+      <!-- 头部 -->
+      <div class="play-page-header">
+        <svg class="icon return">
+          <use xlink:href="#icon-fanhui"></use>
+        </svg>
+      </div>
+      <!-- 封面 -->
+      <div class="cover">
+        <img src="img/fengmian.png" alt="">
+      </div>
+      <!-- 歌曲 歌手 -->
+      <div class="page-name">
+        <p class="page-sing">月半小夜曲</p>
+        <p class="page-singer">李克勤</p>
+      </div>
+      <!-- 进度条控件 -->
+      <div class="schedule">
+        <span class="timeing">00:00</span>
+        <!-- 进度条 -->
+        <div class="jinduwrap">
+          <i class="jinduIng"></i>
+        </div>
+        <span class="time">00:00</span>
+      </div>
+      <!-- 播放 -->
+      <div class="pagePlay">
+            <svg class="icon page-palybtn palybtn">
+              <use xlink:href="#icon-bofang"></use>
+            </svg>
+            <svg class="icon page-pausebtn pausebtn">
+                <use xlink:href="#icon-zanting"></use>
+            </svg>
+            
+      </div>
+
+    </div>
 
    
     
@@ -207,7 +248,6 @@
 <script src="js/swiperjs.js"></script>
 <script src="js/play.js"></script>
 <script>
-
 
 
 
